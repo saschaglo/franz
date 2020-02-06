@@ -68,7 +68,6 @@ class AppLayout extends Component {
     areRequiredRequestsSuccessful: PropTypes.bool.isRequired,
     retryRequiredRequests: PropTypes.func.isRequired,
     areRequiredRequestsLoading: PropTypes.bool.isRequired,
-    isDelayAppScreenVisible: PropTypes.bool.isRequired,
   };
 
   static defaultProps = {
@@ -100,7 +99,6 @@ class AppLayout extends Component {
       areRequiredRequestsSuccessful,
       retryRequiredRequests,
       areRequiredRequestsLoading,
-      isDelayAppScreenVisible,
     } = this.props;
 
     const { intl } = this.context;
@@ -163,7 +161,6 @@ class AppLayout extends Component {
                   onInstallUpdate={installAppUpdate}
                 />
               )}
-              {isDelayAppScreenVisible && (<DelayApp />)}
               <BasicAuth />
               <ShareFranz />
               {services}
